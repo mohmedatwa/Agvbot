@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<robot  xmlns:xacro="http://www.ros.org/wiki/xacro">
+    
+    <xacro:macro name="wheel_control" params="prefix">
+            <joint name="${prefix}_wheel_joint">
+                <command_interface name="velocity">
+                    <param name="min">-20</param>
+                    <param name="max">20</param>
+                </command_interface>
+                <state_interface name="position"/>
+                <state_interface name="velocity"/>
+            </joint>
+    </xacro:macro>
+
+    <ros2_control name="RobotSystem" type="system">
+        <hardware>
+            <plugin>gz_ros2_control/GazeboSimSystem</plugin>
+        </hardware>
+        <xacro:wheel_control prefix="front_left"  />
+        <xacro:wheel_control prefix="front_right"  />
+        <xacro:wheel_control prefix="back_left" />
+        <xacro:wheel_control prefix="back_right" />
+                
+    </ros2_control>
+</robot>
