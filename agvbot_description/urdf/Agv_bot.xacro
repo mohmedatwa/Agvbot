@@ -6,9 +6,11 @@
     <xacro:include filename="$(find agvbot_description)/urdf/mech/base_link.xacro" />
     <xacro:include filename="$(find agvbot_description)/urdf/mech/wheel_link.xacro" />
     <xacro:include filename="$(find agvbot_description)/urdf/sensors/imu_link.xacro" />
+    <xacro:include filename="$(find agvbot_description)/urdf/sensors/realsense_d435.xacro" />
     <xacro:include filename="$(find agvbot_description)/urdf/sensors/lidar_link.xacro" />
     <xacro:include filename="$(find agvbot_description)/urdf/Agv_bot_gazebo.xacro" />
     <xacro:include filename="$(find agvbot_description)/urdf/mech/wheels_physics.xacro" />
     <xacro:include filename="$(find agvbot_description)/urdf/Agv_bot_control.xacro" />
+    <!-- <xacro:include filename="$(find agvbot_description)/urdf/ur_arm/ur_arm.xacro" /> -->
     
 </robot>

@@ -23,6 +23,14 @@ mecanum_controller:
     wheel_separation: 0.45
     wheel_base: 0.48
     wheel_radius: 0.05
+    kinematics:
+      wheels_radius: 0.05
+
+
+      # lx + ly
+      # lx = wheel_separation_x / 2
+      # ly = wheel_separation_y / 2
+      sum_of_robot_center_projection_on_X_Y_axis: 0.44219
 
     base_frame_id: base_footprint
     odom_frame_id: odom
@@ -31,13 +39,6 @@ mecanum_controller:
     publish_rate: 50.0
     cmd_vel_timeout: 0.5
     twist_covariance_diagonal: [0.001, 0.001, 0.001, 0.001, 0.001, 0.01]
-
-    
-
-  
-
-
-    
 
 
 
