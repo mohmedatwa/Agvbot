@@ -10,7 +10,7 @@
     <xacro:property name="imu_width" value="0.01" />
     <xacro:property name="imu_height" value="0.002" />
     <xacro:property name="lidar_radius" value="0.025" />
-    <xacro:property name="lidar_length" value="0.05" />
+    <xacro:property name="lidar_length" value="0.03" />
 
     <link name="base_footprint"/>
     <link name="base_link">
@@ -30,7 +30,7 @@
         <xacro:box_inertia m="15.0" x="${base_length}" y="${base_width}" z="${base_height}"
                            o_xyz="0 0 ${base_height / 2.0}" o_rpy="0 0 0" />
     </link>
-    <joint name="base_joint" type="fixed">
+    <joint name="base_moblile_joint" type="fixed">
         <parent link="base_footprint" />
         <child link="base_link" />
         <origin xyz="0 0 ${wheel_radius}" rpy="0 0 0"/>
