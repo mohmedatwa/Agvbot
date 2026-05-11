@@ -22,12 +22,19 @@ def generate_launch_description():
          ],
 
     )
+    odom_tf= Node(
+        package='topic_tools',
+        executable='relay',
+        name='tf_odometry_relay',
+        output='screen',
+        arguments=['/mecanum_controller/tf_odometry', 'tf'],
+    )
 
 
     return LaunchDescription(
         [         
-
             joint_state_broadcaster_spawner,         
             Agvbot,
+            odom_tf,
         ]
     )
